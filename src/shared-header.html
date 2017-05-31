@@ -1,0 +1,33 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="shared-header">
+  <template>
+    hello
+  </template>
+  <script>
+    // Define the element's API using an ES2015 class
+    class SharedHeader extends Polymer.Element {
+
+      static get is() { return 'shared-header'; }
+
+      // Declare properties for the element's public API
+      static get properties() {
+        return {
+          greeting: {
+            type: String,
+            value: "Hello!"
+          }
+        }
+      }
+
+      // Add methods to the element's public API
+      greetMe() {
+        console.log(this.greeting);
+      }
+
+    }
+
+    // Register the x-custom element with the browser
+    customElements.define(SharedHeader.is, SharedHeader);
+  </script>
+</dom-module>
